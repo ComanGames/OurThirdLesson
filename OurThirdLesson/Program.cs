@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static System.Console;
 
 namespace OurThirdLesson
@@ -11,26 +7,32 @@ namespace OurThirdLesson
     {
         static void Main()
         {
+            //Method without parameters
+            SayHello();
 
-            WriteLine("Formula 1");
-            for (int i = 0; i <=10; i++)
-                WriteLine($"a{i}=\t{Formula1(i)}");
+            //Methods with parameters with diffrent modifications
+            string text = "Hello";
+            int x = 10;
+            Say(text, x);
 
-            WriteLine("Formula2");
-            for (int i = 0; i <= 10; i++)
-                Formula2(i);
+            Say("Yura", 3);
+            Say("Hello Sasha", 20);
 
             ReadKey();
-
-
         }
 
-        private static void Formula2(int n)
+         static void SayHello()
         {
-            double a = (Math.Pow(-1, n)/(Math.Pow(n, 2)));
-            WriteLine($"a{n}=\t{a}");
+           WriteLine("Helo world"); 
         }
 
+        static void Say(string hello, int count)
+        {
+            for (int i = 0; i < count; i++)
+               WriteLine(hello);
+        }
+
+        //return us result
         static int Formula1(int n)
         {
 
@@ -38,5 +40,11 @@ namespace OurThirdLesson
 
         }
 
+        //not return us result
+        private static void Formula2(int n)
+        {
+            double a = (Math.Pow(-1, n)/(Math.Pow(n, 2)));
+            WriteLine($"a{n}=\t{a}");
+        }
     }
 }
