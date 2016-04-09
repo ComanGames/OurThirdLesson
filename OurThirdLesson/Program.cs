@@ -10,6 +10,18 @@ namespace OurThirdLesson
     {
         static void Main(string[] args)
         {
+            string s = "10";
+            int a = 10;
+            //int to string
+            s = a.ToString();
+            //string to int
+            a = Int32.Parse(s);
+            while (true)
+            {
+                Console.WriteLine("Write your number");
+
+            }
+
         }
     }
 }
